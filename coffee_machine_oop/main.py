@@ -15,11 +15,7 @@ while is_on:
     elif choose == "off":
         is_on = False
     elif choose == "":
-        while choose == "":
-            choose = input(f"Please choose something or type 'off' to turn off the machine: ")
-            if choose == "off":
-                is_on = False
-                break
+        print("Choose some drink, to proceed or off the machine is not needed.")
     else:
         drink = menu.find_drink(choose)
         if coffee_maker.is_resource_sufficient(drink) and money_machine.make_payment(drink.cost):
